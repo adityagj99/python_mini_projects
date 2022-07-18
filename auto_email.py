@@ -6,7 +6,7 @@ def auto_email():
     recipient_email = input("Enter recipient email address: ")          # recipient email address
 
     sender_email = input("Enter sender's email: ")                      # Sender's email address
-    Sender_passwd = input("Enter sendr's password: ")                   # Sender"s password
+    sender_passwd = input("Enter sendr's password: ")                   # Sender"s password
 
     message = (f'''
     Hi {recipient_name},
@@ -19,7 +19,7 @@ def auto_email():
     s = smtplib.SMTP('smtp.gmail.com', 587)                             # SMTP client server and port declaration
     s.ehlo()                                                            # SMTP connection start
     s.starttls()                                                        # TLS(Transport Layer Security) established
-    s.login(sender_email, Sender_passwd)                                # Authentication
+    s.login(sender_email, sender_passwd)                                # Authentication
     s.sendmail(sender_email, recipient_email, message)                  # Email sending process
     print("Email sent")                                                 # Acknowledgement
 
