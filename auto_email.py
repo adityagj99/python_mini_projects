@@ -1,4 +1,4 @@
-# auto send email using smtblib
+# Auto send email using smtblib
 import smtplib                                                          # SMTP library to use SMTP
 
 def auto_email():
